@@ -78,7 +78,6 @@ class DatabaseRepository implements Repository, ValueSerializer
     {
         $exists = $this->table()
             ->where('key', $key)
-            ->where('value', $value)
             ->exists();
 
         $value = $this->serialize($value);
